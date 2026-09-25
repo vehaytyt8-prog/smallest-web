@@ -1,5 +1,30 @@
-.ar-box{
-    font-style: italic;
-    justify-content: center;
-    color: aquamarine;
+body {
+  background-color: aqua;
+}
+button {
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 30px;
+}
+.btn-box {
+  display: flex;
+  justify-content: center;
+}
+.name-box {
+  color: red;
+  text-align: left;
+}
+.head-box {
+  text-align: center;
+  color: blue;
+  font-style: italic;
+}
+.pass-box{
+    color: blue;
+    text-align: left;
+}
+.kak-box{
+    text-align: center;
+    width: 100%;
 }
