@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Multimedia Elements</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+      header nav a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: #0066cc;
+      }
+      section {
+        margin-bottom: 40px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+      /* SVG Styling */
+      svg {
+        border: 1px solid black;
+        background: #f9f9f9;
+      }
+      text {
+        font-family: Arial, sans-serif;
+      }
+      .highlight {
+        fill: orange;
+        font-weight: bold;
+      }
+      /* Embed / Object / Iframe Layout Styling */
+      .embed-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .embed-card {
+        flex: 1 1 30%;
+        border: 1px solid #333;
+        padding: 10px;
+        min-width: 300px;
+      }
+      .embed-card h3 {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      iframe,
+      embed,
+      object {
+        width: 100%;
+        height: 300px;
+        border: 1px solid #666;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#multimedia">About</a>
+        <a href="#multimedia">Project/Work</a>
+        <a href="#multimedia">Resume</a>
+        <a href="#multimedia">Contact</a>
+        <a href="#multimedia">Multimedia</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ផ្នែកទី ១៖ Multimedia (Image, Audio, Video) -->
+      <section id="multimedia" class="multimedia">
+        <h1>១. Multimedia - Image, Audio, and Video</h1>
+
+        <h2>Image - Responsive (mobile, tablet, desktop)</h2>
+        <img
+          src="../multimedia/image/FlagOfCambodia.png"
+          srcset="
+            ../multimedia/image/FlagOfCambodiaMobile.png  480w,
+            ../multimedia/image/FlagOfCambodiaTablet.png  768w,
+            ../multimedia/image/FlagOfCambodia.png       1024w,
+            ../multimedia/image/FlagOfCambodiaLarge.png  1600w
+          "
+          sizes="(max-width: 480px) 480px,
+                  (max-width: 768px) 768px,
+                  (max-width: 1200px) 1024px,
+                  1600px"
+          alt="flag of Cambodia"
+        />
+        <p>Flag of Cambodia</p>
+
+        <h2>Audio - MP3</h2>
+        <audio controls>
+          <source src="../multimedia/sound/NokorReach.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+          <a href="../multimedia/sound/NokorReach.mp3"
+            >Download nokoreach.mp3</a
+          >
+        </audio>
+        <p>Nokor Reach</p>
+
+        <h2>Video - MP4</h2>
+        <video controls width="1280" height="720">
+          <source
+            src="../multimedia/video/NationalAnthemOfCambodia.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+          <a href="../multimedia/video/NationalAnthemOfCambodia.mp4"
+            >Download National Anthem Of Cambodia</a
+          >
+        </video>
+        <p>National Anthem of Cambodia</p>
+      </section>
+
+      <!-- ផ្នែកទី ២៖ HTML Canvas Animation -->
+      <section id="canvas-section">
+        <h2>២. ពិសោធន៍ HTML Canvas ជាមួយ JavaScript (2D Animation)</h2>
+        <canvas
+          id="myCanvas"
+          width="500"
+          height="300"
+          style="border: 1px solid black"
+        >
+          Your browser does not support the canvas element.
+        </canvas>
+      </section>
+
+      <!-- ផ្នែកទី ៣៖ SVG Shapes -->
+      <section id="svg-section">
+        <h2>៣. ពិសោធន៍ SVG Shapes និង Text</h2>
+        <svg width="500" height="400">
+          <!-- Rectangle -->
+          <rect
+            x="20"
+            y="20"
+            width="120"
+            height="60"
+            fill="skyblue"
+            stroke="black"
+            stroke-width="2"
+          />
+          <!-- Circle -->
+          <circle
+            cx="250"
+            cy="50"
+            r="40"
+            fill="tomato"
+            stroke="black"
+            stroke-width="2"
+          />
+          <!-- Ellipse -->
+          <ellipse
+            cx="400"
+            cy="50"
+            rx="60"
+            ry="30"
+            fill="lightgreen"
+            stroke="black"
+            stroke-width="2"
+          />
+          <!-- Line -->
+          <line
+            x1="20"
+            y1="120"
+            x2="480"
+            y2="120"
+            stroke="purple"
+            stroke-width="4"
+          />
+          <!-- Polygon (triangle) -->
+          <polygon
+            points="80,200 20,300 140,300"
+            fill="gold"
+            stroke="black"
+            stroke-width="2"
+          />
+          <!-- Polyline (zigzag) -->
+          <polyline
+            points="200,200 250,250 300,200 350,250 400,200"
+            fill="none"
+            stroke="blue"
+            stroke-width="3"
+          />
+          <!-- Path (custom shape: a curve) -->
+          <path
+            d="M 50 350 C 150 250, 350 450, 450 350"
+            fill="none"
+            stroke="red"
+            stroke-width="3"
+          />
+          <!-- Text with <tspan> -->
+          <text x="50" y="380" font-size="20" fill="black">
+            SVG is
+            <tspan class="highlight">Powerful</tspan>
+            &amp; Scalable
+          </text>
+        </svg>
+      </section>
+
+      <!-- ផ្នែកទី ៤៖ Embedding Documents (iframe, embed, object) -->
+      <section id="embedding-section">
+        <h2>
+          ៤. ពិសោធន៍ដាក់ឯកសារខាងក្រៅ (PDF) ដោយប្រើ iframe, embed, និង object
+        </h2>
+        <div class="embed-container">
+          <!-- IFRAME -->
+          <div class="embed-card">
+            <h3>Using &lt;iframe&gt;</h3>
+            <iframe src="FEWAD2526.pdf"></iframe>
+          </div>
+          <!-- EMBED -->
+          <div class="embed-card">
+            <h3>Using &lt;embed&gt;</h3>
+            <embed src="FEWAD2526.pdf" type="application/pdf" />
+          </div>
+          <!-- OBJECT -->
+          <div class="embed-card">
+            <h3>Using &lt;object&gt;</h3>
+            <object data="FEWAD2526.pdf" type="application/pdf">
+              <p>
+                PDF could not be displayed.
+                <a href="FEWAD2526.pdf">Download PDF</a>
+              </p>
+            </object>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 My Portfolio</p>
+    </footer>
+
+    <!-- JavaScript សម្រាប់ Canvas Animation -->
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      let x = 50;
+      let y = 150;
+      let dx = 2;
+
+      function drawBall() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // clear canvas
+        ctx.beginPath();
+        ctx.arc(x, y, 20, 0, Math.PI * 2); // circle (x, y, radius, startAngle, endAngle)
+        ctx.fillStyle = "blue";
+        ctx.fill();
+        ctx.closePath();
+
+        x += dx; // Update position
+
+        // Bounce if hitting wall
+        if (x + 20 > canvas.width || x - 20 < 0) {
+          dx = -dx;
+        }
+
+        requestAnimationFrame(drawBall); // redraw smoothly
+      }
+
+      drawBall(); // start animation
+    </script>
+  </body>
+</html>
